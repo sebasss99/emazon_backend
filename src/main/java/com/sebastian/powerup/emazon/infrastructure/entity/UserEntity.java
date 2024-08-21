@@ -1,4 +1,4 @@
-package com.sebastian.powerup.emazon.infrastructure;
+package com.sebastian.powerup.emazon.infrastructure.entity;
 
 import com.sebastian.powerup.emazon.domain.model.UserType;
 import jakarta.persistence.*;
