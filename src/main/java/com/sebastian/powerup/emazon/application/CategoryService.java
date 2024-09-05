@@ -2,6 +2,7 @@ package com.sebastian.powerup.emazon.application;
 
 import com.sebastian.powerup.emazon.domain.model.Category;
 import com.sebastian.powerup.emazon.domain.port.ICategoryRepository;
+import org.springframework.data.domain.Page;
 
 public class CategoryService {
     private final ICategoryRepository iCategoryRepository;
@@ -9,6 +10,7 @@ public class CategoryService {
     public CategoryService(ICategoryRepository iCategoryRepository) {
         this.iCategoryRepository = iCategoryRepository;
     }
+
 
     public Category save(Category category) {
         return iCategoryRepository.save(category);
@@ -25,4 +27,9 @@ public class CategoryService {
     public void delete(Integer id) {
         iCategoryRepository.deleteById(id);
     }
+
+    public Page<Category> findAll(PageableQuery pageableQuery) {
+        return iCategoryRepository.getAll(pageableQuery);
+    }
+
 }
