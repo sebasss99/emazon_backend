@@ -25,4 +25,5 @@ class BrandServiceTest {
     @Test
     void testFindAll() {
     }
+
 }
